@@ -2,6 +2,9 @@
 #include "./ui_mainwindow.h"
 #include <QMessageBox>
 
+#include "addexpensedialog.h"
+#include "expense.h"
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -16,6 +19,11 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_addButton_clicked()
 {
-    QMessageBox::information(this,tr("Add Expense"), tr("ADD EXPENSE"));
+    AddExpenseDialog dialog(this);
+    if (dialog.exec() == QDialog::Accepted)
+    {
+        Expense expense = dialog.getExpense();
+        ui->listWidget->addItem(expense.toString());
+    }
 }
 

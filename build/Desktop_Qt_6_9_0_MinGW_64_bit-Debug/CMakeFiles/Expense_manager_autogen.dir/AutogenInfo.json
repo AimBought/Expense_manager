@@ -332,6 +332,12 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/User/Documents/Expense_manager/addexpensedialog.h",
+			"MU",
+			"EWIEGA46WW/moc_addexpensedialog.cpp",
+			null
+		],
+		[
 			"C:/Users/User/Documents/Expense_manager/expense.h",
 			"MU",
 			"EWIEGA46WW/moc_expense.cpp",
@@ -415,6 +421,11 @@
 	"SETTINGS_FILE" : "C:/Users/User/Documents/Expense_manager/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/Expense_manager_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"C:/Users/User/Documents/Expense_manager/addexpensedialog.cpp",
+			"MU",
+			null
+		],
 		[ "C:/Users/User/Documents/Expense_manager/expense.cpp", "MU", null ],
 		[ "C:/Users/User/Documents/Expense_manager/main.cpp", "MU", null ],
 		[ "C:/Users/User/Documents/Expense_manager/mainwindow.cpp", "MU", null ]
