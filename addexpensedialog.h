@@ -2,6 +2,7 @@
 #define ADDEXPENSEDIALOG_H
 
 #include <QDialog>
+#include "expense.h"
 
 namespace Ui {
 class AddExpenseDialog;
@@ -14,6 +15,8 @@ class AddExpenseDialog : public QDialog
 public:
     explicit AddExpenseDialog(QWidget *parent = nullptr);
     ~AddExpenseDialog();
+
+    Expense getExpense() const;
 
 private:
     Ui::AddExpenseDialog *ui;

@@ -45,6 +45,21 @@
      <height>24</height>
     </rect>
    </property>
+   <item>
+    <property name="text">
+     <string>Cash</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Card</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Cryptocurrency</string>
+    </property>
+   </item>
   </widget>
   <widget class="QDoubleSpinBox" name="amountSpinBox">
    <property name="geometry">
