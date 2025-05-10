@@ -10,6 +10,10 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    //context menu enabled
+    ui->listWidget->setContextMenuPolicy(Qt::CustomContextMenu);
+    connect(ui->listWidget, &QListWidget::customContextMenuRequested,
+            this, &MainWindow::showListContextMenu);
 }
 
 MainWindow::~MainWindow()
@@ -27,3 +31,24 @@ void MainWindow::on_addButton_clicked()
     }
 }
 
+void MainWindow::showListContextMenu(const QPoint &pos)
+{
+
+    QPoint globalPos = ui->listWidget->mapToGlobal(pos);
+
+
+    QListWidgetItem *item = ui->listWidget->itemAt(pos);
+    if (!item)
+        return;
+
+    QMenu contextMenu(this);
+    QAction *deleteAction   = contextMenu.addAction(tr("Delete"));
+
+
+    QAction *selectedAction = contextMenu.exec(globalPos);
+    if (selectedAction == deleteAction) {
+
+        QListWidgetItem *taken = ui->listWidget->takeItem(ui->listWidget->row(item));
+        delete taken;
+    }
+}
