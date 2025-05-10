@@ -22,5 +22,6 @@ private:
 
 private slots:
     void on_addButton_clicked();
+    void showListContextMenu(const QPoint &pos);
 };
 #endif // MAINWINDOW_H
