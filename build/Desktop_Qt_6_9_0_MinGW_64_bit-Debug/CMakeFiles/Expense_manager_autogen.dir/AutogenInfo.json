@@ -348,6 +348,12 @@
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
 			null
+		],
+		[
+			"C:/Users/User/Documents/Expense_manager/simplelogger.h",
+			"MU",
+			"EWIEGA46WW/moc_simplelogger.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -428,7 +434,12 @@
 		],
 		[ "C:/Users/User/Documents/Expense_manager/expense.cpp", "MU", null ],
 		[ "C:/Users/User/Documents/Expense_manager/main.cpp", "MU", null ],
-		[ "C:/Users/User/Documents/Expense_manager/mainwindow.cpp", "MU", null ]
+		[ "C:/Users/User/Documents/Expense_manager/mainwindow.cpp", "MU", null ],
+		[
+			"C:/Users/User/Documents/Expense_manager/simplelogger.cpp",
+			"MU",
+			null
+		]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

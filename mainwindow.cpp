@@ -5,6 +5,8 @@
 #include "addexpensedialog.h"
 #include "expense.h"
 
+#include "simplelogger.h"
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -29,6 +31,10 @@ void MainWindow::on_addButton_clicked()
         Expense expense = dialog.getExpense();
         ui->listWidget->addItem(expense.toString());
     }
+    //Feedback after adding new item
+    SimpleLogger simpleLogger;
+    simpleLogger.logMessage("Added new item successfully!");
+
 }
 
 void MainWindow::showListContextMenu(const QPoint &pos)
@@ -50,5 +56,9 @@ void MainWindow::showListContextMenu(const QPoint &pos)
 
         QListWidgetItem *taken = ui->listWidget->takeItem(ui->listWidget->row(item));
         delete taken;
+        //Feddback after deleting item
+        SimpleLogger simpleLogger;
+        simpleLogger.logMessage("Deleted item successfully");
+
     }
 }
