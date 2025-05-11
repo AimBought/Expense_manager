@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "expense.h"
+#include <vector>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -19,6 +21,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
+     std::vector<Expense> expenses;
 
 private slots:
     void on_addButton_clicked();

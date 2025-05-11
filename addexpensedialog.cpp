@@ -26,3 +26,12 @@ Expense AddExpenseDialog::getExpense() const
         ui->dateEdit->date()
         );
 }
+
+void AddExpenseDialog::setExpense(const Expense &expense)
+{
+    ui->categoryLineEdit->setText(expense.category);
+    ui->productLineEdit->setText(expense.product);
+    ui->paymentMethodComboBox->setCurrentText(expense.paymentMethod);
+    ui->amountSpinBox->setValue(expense.amount);
+    ui->dateEdit->setDate(expense.date);
+}

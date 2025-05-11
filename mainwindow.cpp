@@ -30,6 +30,7 @@ void MainWindow::on_addButton_clicked()
     {
         Expense expense = dialog.getExpense();
         ui->listWidget->addItem(expense.toString());
+        expenses.push_back(expense);
     }
     //Feedback after adding new item
     SimpleLogger simpleLogger;
@@ -39,26 +40,36 @@ void MainWindow::on_addButton_clicked()
 
 void MainWindow::showListContextMenu(const QPoint &pos)
 {
-
     QPoint globalPos = ui->listWidget->mapToGlobal(pos);
+    QListWidgetItem* item = ui->listWidget->itemAt(pos);
+    if (!item) return;
 
+    QMenu contextMenu;
+    QAction* editAction   = contextMenu.addAction("Edit");
+    QAction* deleteAction = contextMenu.addAction("Delete");
 
-    QListWidgetItem *item = ui->listWidget->itemAt(pos);
-    if (!item)
-        return;
+    QAction* selectedAction = contextMenu.exec(globalPos);
+    if (!selectedAction) return;
 
-    QMenu contextMenu(this);
-    QAction *deleteAction   = contextMenu.addAction(tr("Delete"));
-
-
-    QAction *selectedAction = contextMenu.exec(globalPos);
     if (selectedAction == deleteAction) {
 
-        QListWidgetItem *taken = ui->listWidget->takeItem(ui->listWidget->row(item));
-        delete taken;
-        //Feddback after deleting item
+        delete ui->listWidget->takeItem(ui->listWidget->row(item));
+        //Feedback after deleting item
         SimpleLogger simpleLogger;
         simpleLogger.logMessage("Deleted item successfully");
+    }
+    else if (selectedAction == editAction) {
+        int row = ui->listWidget->row(item);
 
+        AddExpenseDialog dialog(this);
+        dialog.setExpense(expenses[row]);
+
+        if (dialog.exec() == QDialog::Accepted) {
+            Expense updated = dialog.getExpense();
+            expenses[row] = updated;
+            item->setText(updated.toString());
+        }
     }
 }
+
+
