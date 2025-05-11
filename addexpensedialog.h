@@ -17,6 +17,7 @@ public:
     ~AddExpenseDialog();
 
     Expense getExpense() const;
+    void setExpense(const Expense &expense);
 
 private:
     Ui::AddExpenseDialog *ui;

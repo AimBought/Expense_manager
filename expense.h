@@ -4,6 +4,7 @@
 #include <QString>
 #include <QDate>
 
+
 class Expense {
 public:
     Expense(const QString &category, const QString &product, const QString &paymentMethod, double amount, const QDate &date);
