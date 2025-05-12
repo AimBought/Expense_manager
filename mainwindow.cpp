@@ -51,23 +51,28 @@ void MainWindow::showListContextMenu(const QPoint &pos)
     QAction* selectedAction = contextMenu.exec(globalPos);
     if (!selectedAction) return;
 
-    if (selectedAction == deleteAction) {
-
+    if (selectedAction == deleteAction)
+    {
         delete ui->listWidget->takeItem(ui->listWidget->row(item));
         //Feedback after deleting item
         SimpleLogger simpleLogger;
-        simpleLogger.logMessage("Deleted item successfully");
+        simpleLogger.logMessage("Deleted item successfully!");
     }
-    else if (selectedAction == editAction) {
+    else if (selectedAction == editAction)
+    {
         int row = ui->listWidget->row(item);
 
         AddExpenseDialog dialog(this);
         dialog.setExpense(expenses[row]);
 
-        if (dialog.exec() == QDialog::Accepted) {
+        if (dialog.exec() == QDialog::Accepted)
+        {
             Expense updated = dialog.getExpense();
             expenses[row] = updated;
             item->setText(updated.toString());
+            //Feedback after editing item
+            SimpleLogger simpleLogger;
+            simpleLogger.logMessage("Edited item successfully!");
         }
     }
 }
