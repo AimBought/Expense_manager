@@ -21,7 +21,8 @@ public:
 
 private:
     Ui::MainWindow *ui;
-     std::vector<Expense> expenses;
+    std::vector<Expense> expenses;
+    Expense totalExpense;
 
 private slots:
     void on_addButton_clicked();

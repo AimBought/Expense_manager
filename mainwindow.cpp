@@ -31,11 +31,13 @@ void MainWindow::on_addButton_clicked()
         Expense expense = dialog.getExpense();
         ui->listWidget->addItem(expense.toString());
         expenses.push_back(expense);
+        //add expense to sum and display
+        totalExpense = totalExpense + expense;
+        ui->sumLabel->setText(QString("%1 zł").arg(totalExpense.getAmount(), 0, 'f', 2));
     }
     //Feedback after adding new item
     SimpleLogger simpleLogger;
     simpleLogger.logMessage("Added new item successfully!");
-
 }
 
 void MainWindow::showListContextMenu(const QPoint &pos)
@@ -53,7 +55,12 @@ void MainWindow::showListContextMenu(const QPoint &pos)
 
     if (selectedAction == deleteAction)
     {
-        delete ui->listWidget->takeItem(ui->listWidget->row(item));
+        int row = ui->listWidget->row(item);
+        totalExpense = totalExpense + Expense(-expenses[row].getAmount());
+        expenses.erase(expenses.begin() + row);
+        delete ui->listWidget->takeItem(row);
+
+        ui->sumLabel->setText(QString("%1 zł").arg(totalExpense.getAmount(), 0, 'f', 2));
         //Feedback after deleting item
         SimpleLogger simpleLogger;
         simpleLogger.logMessage("Deleted item successfully!");
@@ -70,6 +77,16 @@ void MainWindow::showListContextMenu(const QPoint &pos)
             Expense updated = dialog.getExpense();
             expenses[row] = updated;
             item->setText(updated.toString());
+
+            //edit sum of expenses
+            Expense sum;
+            for (const auto &exp : expenses) {
+                sum = sum + exp;
+            }
+            totalExpense = sum;
+
+            ui->sumLabel->setText(QString("%1 zł").arg(totalExpense.getAmount(), 0, 'f', 2));
+
             //Feedback after editing item
             SimpleLogger simpleLogger;
             simpleLogger.logMessage("Edited item successfully!");
