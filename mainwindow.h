@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "expense.h"
 #include <vector>
+#include <QFile>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -24,8 +25,10 @@ private:
     std::vector<Expense> expenses;
     Expense totalExpense;
 
+
 private slots:
     void on_addButton_clicked();
     void showListContextMenu(const QPoint &pos);
+    void on_saveButton_clicked();
 };
 #endif // MAINWINDOW_H

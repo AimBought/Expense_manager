@@ -94,4 +94,23 @@ void MainWindow::showListContextMenu(const QPoint &pos)
     }
 }
 
+void MainWindow::on_saveButton_clicked()
+{
+    QFile file("expenses.txt");
+    if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        QTextStream out(&file);
+        for (const Expense &e : expenses) {
+            out << e.toString() << "\n";
+        }
+        file.close();
+        //Feedback after saving successfully
+        SimpleLogger simpleLogger;
+        simpleLogger.logMessage("Saved to file successfully!");
+    } else {
+        //Feedback after error
+        SimpleLogger simpleLogger;
+        simpleLogger.logMessage("Couldn't save to file!");
+    }
+}
+
 
