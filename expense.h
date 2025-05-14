@@ -14,7 +14,15 @@ public:
     QString product;
     QString paymentMethod;
     double amount;
-    QDate date;
+    QDate date;\
+    //amount getter
+    double getAmount() const;
+    //allow for creating empty objects
+    Expense();
+    Expense(double amount);
 };
+
+//overloading operator + for displaying sum of items' price
+Expense operator+(const Expense &lhs, const Expense &rhs);
 
 #endif // EXPENSE_H
