@@ -80,7 +80,8 @@ void MainWindow::showListContextMenu(const QPoint &pos)
 
             //edit sum of expenses
             Expense sum;
-            for (const auto &exp : expenses) {
+            for (const auto &exp : expenses)
+            {
                 sum = sum + exp;
             }
             totalExpense = sum;
@@ -97,20 +98,66 @@ void MainWindow::showListContextMenu(const QPoint &pos)
 void MainWindow::on_saveButton_clicked()
 {
     QFile file("expenses.txt");
-    if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+    if (file.open(QIODevice::WriteOnly | QIODevice::Text))
+    {
         QTextStream out(&file);
-        for (const Expense &e : expenses) {
+        for (const Expense &e : expenses)
+        {
             out << e.toString() << "\n";
         }
         file.close();
         //Feedback after saving successfully
         SimpleLogger simpleLogger;
         simpleLogger.logMessage("Saved to file successfully!");
-    } else {
+    } else
+    {
         //Feedback after error
         SimpleLogger simpleLogger;
         simpleLogger.logMessage("Couldn't save to file!");
     }
 }
 
+void MainWindow::on_readButton_clicked()
+{
+    QFile file("expenses.txt");
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        QTextStream in(&file);
 
+        ui->listWidget->clear();
+        expenses.clear();
+
+        while (!in.atEnd())
+        {
+            QString line = in.readLine();
+            Expense e = Expense::fromString(line);
+            expenses.push_back(e);
+            ui->listWidget->addItem(e.toString());
+        }
+
+        file.close();
+
+        updateTotalExpense();
+
+        //Feedback after reading successfully
+        SimpleLogger simpleLogger;
+        simpleLogger.logMessage("Read from file successfully!");
+    }
+    else
+    {
+        //Feedback after error
+        SimpleLogger simpleLogger;
+        simpleLogger.logMessage("Couldn't read from file!");
+    }
+}
+
+void MainWindow::updateTotalExpense()
+{
+    Expense sum;
+    for (const Expense &e : expenses)
+    {
+        sum = sum + e;
+    }
+    totalExpense = sum;
+    ui->sumLabel->setText(QString("%1 zł").arg(totalExpense.getAmount(), 0, 'f', 2));
+}

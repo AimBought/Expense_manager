@@ -37,3 +37,22 @@ Expense::Expense(double amount)
 {
 }
 
+//used for read from file function
+Expense Expense::fromString(const QString &str)
+{
+    QStringList parts = str.split('|');
+    if (parts.size() != 5)
+        return Expense(); // lub zgłoś błąd
+
+    Expense e;
+    e.category = parts[0].trimmed();
+    e.product = parts[1].trimmed();
+    e.paymentMethod = parts[2].trimmed();
+
+    QString amountStr = parts[3];
+    amountStr = amountStr.replace(" zł", "").trimmed();
+    e.amount = amountStr.toDouble();
+
+    e.date = QDate::fromString(parts[4].trimmed(), Qt::ISODate);
+    return e;
+}

@@ -20,6 +20,8 @@ public:
     //allow for creating empty objects
     Expense();
     Expense(double amount);
+    //used for read from file function
+    static Expense fromString(const QString &str);
 };
 
 //overloading operator + for displaying sum of items' price
