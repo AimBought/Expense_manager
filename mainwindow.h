@@ -19,6 +19,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void updateTotalExpense();
 
 private:
     Ui::MainWindow *ui;
@@ -30,5 +31,6 @@ private slots:
     void on_addButton_clicked();
     void showListContextMenu(const QPoint &pos);
     void on_saveButton_clicked();
+    void on_readButton_clicked();
 };
 #endif // MAINWINDOW_H
