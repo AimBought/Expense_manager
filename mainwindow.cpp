@@ -34,10 +34,10 @@ void MainWindow::on_addButton_clicked()
         //add expense to sum and display
         totalExpense = totalExpense + expense;
         ui->sumLabel->setText(QString("%1 zł").arg(totalExpense.getAmount(), 0, 'f', 2));
+        //Feedback after adding new item
+        SimpleLogger simpleLogger;
+        simpleLogger.logMessage("Added new item successfully!");
     }
-    //Feedback after adding new item
-    SimpleLogger simpleLogger;
-    simpleLogger.logMessage("Added new item successfully!");
 }
 
 void MainWindow::showListContextMenu(const QPoint &pos)
@@ -160,4 +160,15 @@ void MainWindow::updateTotalExpense()
     }
     totalExpense = sum;
     ui->sumLabel->setText(QString("%1 zł").arg(totalExpense.getAmount(), 0, 'f', 2));
+}
+
+//removes all items from listWidget
+void MainWindow::on_removeButton_clicked()
+{
+    ui->listWidget->clear();
+    expenses.clear();
+    updateTotalExpense();
+    //Feedback after removing all items
+    SimpleLogger simpleLogger;
+    simpleLogger.logMessage("List cleared successfully");
 }
