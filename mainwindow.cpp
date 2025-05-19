@@ -106,7 +106,7 @@ void MainWindow::on_saveButton_clicked()
             out << e.toString() << "\n";
         }
         file.close();
-        //Feedback after saving successfully
+        //Feedback aftersuccessfully
         SimpleLogger simpleLogger;
         simpleLogger.logMessage("Saved to file successfully!");
     } else
