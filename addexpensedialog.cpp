@@ -25,7 +25,6 @@ Expense AddExpenseDialog::getExpense() const
         ui->amountSpinBox->value(),
         ui->dateEdit->date()
         );
-    //test do commita
 }
 
 void AddExpenseDialog::setExpense(const Expense &expense)
