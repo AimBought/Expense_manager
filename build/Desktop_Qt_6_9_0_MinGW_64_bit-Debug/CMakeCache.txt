@@ -14,6 +14,15 @@
 # EXTERNAL cache entries
 ########################
 
+//Value Computed by CMake
+Business_logic_BINARY_DIR:STATIC=C:/Users/User/Documents/Expense_manager/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Business_logic
+
+//Value Computed by CMake
+Business_logic_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+Business_logic_SOURCE_DIR:STATIC=C:/Users/User/Documents/Expense_manager/Business_logic
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=C:/Qt/Tools/mingw1310_64/bin/addr2line.exe
 
@@ -492,7 +501,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

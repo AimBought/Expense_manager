@@ -14,7 +14,7 @@ public:
     QString product;
     QString paymentMethod;
     double amount;
-    QDate date;\
+    QDate date;
     //amount getter
     double getAmount() const;
     //allow for creating empty objects

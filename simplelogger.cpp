@@ -1,6 +1,6 @@
 #include "simplelogger.h"
 #include <QtWidgets/qmessagebox.h>
-#include<string>
+#include <string>
 
 
 SimpleLogger::SimpleLogger() {}

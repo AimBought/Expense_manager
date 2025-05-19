@@ -28,7 +28,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         addexpensedialog.h addexpensedialog.cpp addexpensedialog.ui
 
 
-        expense.h expense.cpp
+
         simplelogger.h simplelogger.cpp
     )
 # Define target properties for Android with Qt 6 as:
@@ -50,6 +50,8 @@ else()
 endif()
 
 target_link_libraries(Expense_manager PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(Expense_manager PRIVATE Business_logic Qt6::Widgets)
+target_include_directories(Expense_manager PRIVATE ${CMAKE_SOURCE_DIR}/Business_logic)
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
@@ -75,3 +77,4 @@ install(TARGETS Expense_manager
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(Expense_manager)
 endif()
+add_subdirectory(Business_logic)

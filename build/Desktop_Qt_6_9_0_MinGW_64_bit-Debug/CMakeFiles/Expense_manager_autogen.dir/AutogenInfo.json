@@ -338,12 +338,6 @@
 			null
 		],
 		[
-			"C:/Users/User/Documents/Expense_manager/expense.h",
-			"MU",
-			"EWIEGA46WW/moc_expense.cpp",
-			null
-		],
-		[
 			"C:/Users/User/Documents/Expense_manager/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -382,6 +376,7 @@
 	],
 	"MOC_INCLUDES" : 
 	[
+		"C:/Users/User/Documents/Expense_manager/Business_logic",
 		"C:/Qt/6.9.0/mingw_64/include/QtCore",
 		"C:/Qt/6.9.0/mingw_64/include",
 		"C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++",
@@ -432,7 +427,6 @@
 			"MU",
 			null
 		],
-		[ "C:/Users/User/Documents/Expense_manager/expense.cpp", "MU", null ],
 		[ "C:/Users/User/Documents/Expense_manager/main.cpp", "MU", null ],
 		[ "C:/Users/User/Documents/Expense_manager/mainwindow.cpp", "MU", null ],
 		[

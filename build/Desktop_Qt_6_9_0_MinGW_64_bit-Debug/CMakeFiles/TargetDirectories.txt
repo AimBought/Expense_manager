@@ -7,3 +7,12 @@ C:/Users/User/Documents/Expense_manager/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debu
 C:/Users/User/Documents/Expense_manager/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
 C:/Users/User/Documents/Expense_manager/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/Expense_manager_autogen_timestamp_deps.dir
 C:/Users/User/Documents/Expense_manager/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/Expense_manager_autogen.dir
+C:/Users/User/Documents/Expense_manager/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Business_logic/CMakeFiles/Business_logic.dir
+C:/Users/User/Documents/Expense_manager/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Business_logic/CMakeFiles/edit_cache.dir
+C:/Users/User/Documents/Expense_manager/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Business_logic/CMakeFiles/rebuild_cache.dir
+C:/Users/User/Documents/Expense_manager/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Business_logic/CMakeFiles/list_install_components.dir
+C:/Users/User/Documents/Expense_manager/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Business_logic/CMakeFiles/install.dir
+C:/Users/User/Documents/Expense_manager/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Business_logic/CMakeFiles/install/local.dir
+C:/Users/User/Documents/Expense_manager/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Business_logic/CMakeFiles/install/strip.dir
+C:/Users/User/Documents/Expense_manager/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Business_logic/CMakeFiles/Business_logic_autogen_timestamp_deps.dir
+C:/Users/User/Documents/Expense_manager/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Business_logic/CMakeFiles/Business_logic_autogen.dir

@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "expense.h"
+#include "Business_logic/expense.h"
 #include <vector>
 #include <QFile>
 
