@@ -24,6 +24,7 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::on_addButton_clicked()
+// addButton
 {
     AddExpenseDialog dialog(this);
     if (dialog.exec() == QDialog::Accepted)
