@@ -1,0 +1,16 @@
+C:/Users/jakub/Documents/Expense_manager/Expense_manager/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/CMakeFiles/Expense_manager.dir
+C:/Users/jakub/Documents/Expense_manager/Expense_manager/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/CMakeFiles/edit_cache.dir
+C:/Users/jakub/Documents/Expense_manager/Expense_manager/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/jakub/Documents/Expense_manager/Expense_manager/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/CMakeFiles/list_install_components.dir
+C:/Users/jakub/Documents/Expense_manager/Expense_manager/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/CMakeFiles/install.dir
+C:/Users/jakub/Documents/Expense_manager/Expense_manager/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/CMakeFiles/install/local.dir
+C:/Users/jakub/Documents/Expense_manager/Expense_manager/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/CMakeFiles/Expense_manager_autogen_timestamp_deps.dir
+C:/Users/jakub/Documents/Expense_manager/Expense_manager/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/CMakeFiles/Expense_manager_autogen.dir
+C:/Users/jakub/Documents/Expense_manager/Expense_manager/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/Business_logic/CMakeFiles/Business_logic.dir
+C:/Users/jakub/Documents/Expense_manager/Expense_manager/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/Business_logic/CMakeFiles/edit_cache.dir
+C:/Users/jakub/Documents/Expense_manager/Expense_manager/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/Business_logic/CMakeFiles/rebuild_cache.dir
+C:/Users/jakub/Documents/Expense_manager/Expense_manager/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/Business_logic/CMakeFiles/list_install_components.dir
+C:/Users/jakub/Documents/Expense_manager/Expense_manager/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/Business_logic/CMakeFiles/install.dir
+C:/Users/jakub/Documents/Expense_manager/Expense_manager/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/Business_logic/CMakeFiles/install/local.dir
+C:/Users/jakub/Documents/Expense_manager/Expense_manager/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/Business_logic/CMakeFiles/Business_logic_autogen_timestamp_deps.dir
+C:/Users/jakub/Documents/Expense_manager/Expense_manager/build/Desktop_Qt_6_9_0_MSVC2022_64bit-Debug/Business_logic/CMakeFiles/Business_logic_autogen.dir

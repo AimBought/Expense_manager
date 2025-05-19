@@ -1,0 +1,27 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"Business_logic/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"id" : "Business_logic_autogen_timestamp_deps::@9d511b0a1c75f550e45f",
+	"isGeneratorProvided" : true,
+	"name" : "Business_logic_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "Business_logic",
+		"source" : "Business_logic"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

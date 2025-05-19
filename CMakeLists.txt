@@ -44,7 +44,14 @@ else()
 #    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
     else()
         add_executable(Expense_manager
-            ${PROJECT_SOURCES}
+          main.cpp
+          mainwindow.cpp
+          Business_logic/expense.cpp
+          Business_logic/simplelogger.cpp
+        )
+
+        target_link_libraries(Expense_manager
+          PRIVATE Qt6::Widgets
         )
     endif()
 endif()
@@ -78,3 +85,4 @@ if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(Expense_manager)
 endif()
 add_subdirectory(Business_logic)
+
