@@ -1,0 +1,139 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-3920befecb14c95d5b3b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						3,
+						4,
+						5
+					]
+				},
+				{
+					"build" : "Business_logic",
+					"jsonFile" : "directory-Business_logic-Debug-6ee1f5218ed053c64341.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "Business_logic",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Expense_manager",
+					"targetIndexes" : 
+					[
+						3,
+						4,
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "Business_logic",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "Business_logic::@9d511b0a1c75f550e45f",
+					"jsonFile" : "target-Business_logic-Debug-8e7db37266f3fe57f2fa.json",
+					"name" : "Business_logic",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "Business_logic_autogen::@9d511b0a1c75f550e45f",
+					"jsonFile" : "target-Business_logic_autogen-Debug-066eac29e250a012dc81.json",
+					"name" : "Business_logic_autogen",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "Business_logic_autogen_timestamp_deps::@9d511b0a1c75f550e45f",
+					"jsonFile" : "target-Business_logic_autogen_timestamp_deps-Debug-9261239c60978e222b51.json",
+					"name" : "Business_logic_autogen_timestamp_deps",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Expense_manager::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Expense_manager-Debug-ff1df5e86d65330eb602.json",
+					"name" : "Expense_manager",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Expense_manager_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Expense_manager_autogen-Debug-8aa0d8fa1b46bfe02db9.json",
+					"name" : "Expense_manager_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Expense_manager_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Expense_manager_autogen_timestamp_deps-Debug-79cc84aeb8fb1c0c5e65.json",
+					"name" : "Expense_manager_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/User/Documents/Expense_manager/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug",
+		"source" : "C:/Users/User/Documents/Expense_manager"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
