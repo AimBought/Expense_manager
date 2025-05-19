@@ -3,7 +3,7 @@
 #include <QMessageBox>
 
 #include "addexpensedialog.h"
-#include "expense.h"
+#include "Business_logic/expense.h"
 
 #include "simplelogger.h"
 

@@ -120,7 +120,7 @@
                <string notr="true">font: 20pt &quot;Segoe UI&quot;;</string>
               </property>
               <property name="text">
-               <string/>
+               <string>0.00 zł</string>
               </property>
              </widget>
             </item>
@@ -169,7 +169,7 @@
      <x>0</x>
      <y>0</y>
      <width>535</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

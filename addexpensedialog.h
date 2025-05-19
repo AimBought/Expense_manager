@@ -2,7 +2,7 @@
 #define ADDEXPENSEDIALOG_H
 
 #include <QDialog>
-#include "expense.h"
+#include "Business_logic/expense.h"
 
 namespace Ui {
 class AddExpenseDialog;

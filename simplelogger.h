@@ -1,6 +1,6 @@
 #ifndef SIMPLELOGGER_H
 #define SIMPLELOGGER_H
-#include<string>
+#include <string>
 
 class SimpleLogger
 {
