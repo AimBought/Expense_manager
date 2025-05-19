@@ -26,7 +26,6 @@ Expense AddExpenseDialog::getExpense() const
         ui->dateEdit->date()
         );
     //test do commita
-    //test commit
 }
 
 void AddExpenseDialog::setExpense(const Expense &expense)
