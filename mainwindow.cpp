@@ -172,3 +172,4 @@ void MainWindow::on_removeButton_clicked()
     SimpleLogger simpleLogger;
     simpleLogger.logMessage("List cleared successfully");
 }
+//fix comment
