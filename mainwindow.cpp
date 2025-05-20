@@ -4,6 +4,7 @@
 
 #include "addexpensedialog.h"
 #include "Business_logic/expense.h"
+#include "Business_logic/exceptions.h"
 
 #include "simplelogger.h"
 
@@ -47,7 +48,7 @@ void MainWindow::showListContextMenu(const QPoint &pos)
     if (!item) return;
 
     QMenu contextMenu;
-    QAction* editAction   = contextMenu.addAction("Edit");
+    QAction* editAction = contextMenu.addAction("Edit");
     QAction* deleteAction = contextMenu.addAction("Delete");
 
     QAction* selectedAction = contextMenu.exec(globalPos);
@@ -97,9 +98,14 @@ void MainWindow::showListContextMenu(const QPoint &pos)
 
 void MainWindow::on_saveButton_clicked()
 {
-    QFile file("expenses.txt");
-    if (file.open(QIODevice::WriteOnly | QIODevice::Text))
+    try
     {
+        QFile file("expenses.txt");
+        if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
+        {
+            throw FileWriteException();
+        }
+
         QTextStream out(&file);
         for (const Expense &e : expenses)
         {
@@ -109,19 +115,24 @@ void MainWindow::on_saveButton_clicked()
         //Feedback after saving successfully
         SimpleLogger simpleLogger;
         simpleLogger.logMessage("Saved to file successfully!");
-    } else
+    }
+    catch (exception& FileWriteException)
     {
         //Feedback after error
         SimpleLogger simpleLogger;
-        simpleLogger.logMessage("Couldn't save to file!");
+        simpleLogger.logMessage(FileWriteException.what());
     }
 }
 
 void MainWindow::on_readButton_clicked()
 {
-    QFile file("expenses.txt");
-    if (file.open(QIODevice::ReadOnly | QIODevice::Text))
+    try
     {
+        QFile file("expenses.txt");
+        if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+        {
+            throw FileReadException();
+        }
         QTextStream in(&file);
 
         ui->listWidget->clear();
@@ -143,11 +154,11 @@ void MainWindow::on_readButton_clicked()
         SimpleLogger simpleLogger;
         simpleLogger.logMessage("Read from file successfully!");
     }
-    else
+    catch (exception& FileReadException)
     {
         //Feedback after error
         SimpleLogger simpleLogger;
-        simpleLogger.logMessage("Couldn't read from file!");
+        simpleLogger.logMessage(FileReadException.what());
     }
 }
 
