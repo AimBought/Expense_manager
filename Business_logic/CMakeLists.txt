@@ -16,6 +16,7 @@ add_library(Business_logic SHARED
   expense.cpp
   expense.h
   exceptions.h
+  transaction.h transaction.cpp
 )
 
 target_link_libraries(Business_logic PRIVATE Qt${QT_VERSION_MAJOR}::Core)

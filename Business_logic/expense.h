@@ -3,9 +3,9 @@
 
 #include <QString>
 #include <QDate>
+#include "transaction.h"
 
-
-class Expense {
+class Expense : public Transaction {
 public:
     Expense(const QString &category, const QString &product, const QString &paymentMethod, double amount, const QDate &date);
 
