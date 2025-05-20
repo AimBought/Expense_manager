@@ -17,6 +17,10 @@ public:
     QDate date;
     //amount getter
     double getAmount() const;
+    //category getter
+    QString getCategory() const;
+    //product getter
+    QString getProduct() const;
     //allow for creating empty objects
     Expense();
     Expense(double amount);

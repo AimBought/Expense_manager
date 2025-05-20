@@ -30,6 +30,14 @@ void MainWindow::on_addButton_clicked()
     if (dialog.exec() == QDialog::Accepted)
     {
         Expense expense = dialog.getExpense();
+        if (expense.getCategory().isEmpty() ||
+            expense.getProduct().isEmpty() ||
+            expense.getAmount() <= 0.0) {
+            //Feedback after adding new item
+            SimpleLogger simpleLogger;
+            simpleLogger.logMessage("Can't add empty expense!");
+            return;
+        }
         ui->listWidget->addItem(expense.toString());
         expenses.push_back(expense);
         //add expense to sum and display
@@ -76,6 +84,14 @@ void MainWindow::showListContextMenu(const QPoint &pos)
         if (dialog.exec() == QDialog::Accepted)
         {
             Expense updated = dialog.getExpense();
+            if (updated.getCategory().isEmpty() ||
+                updated.getProduct().isEmpty() ||
+                updated.getAmount() <= 0.0) {
+                //Feedback after adding new item
+                SimpleLogger simpleLogger;
+                simpleLogger.logMessage("Can't edit to empty expense!");
+                return;
+            }
             expenses[row] = updated;
             item->setText(updated.toString());
 

@@ -26,6 +26,14 @@ double Expense::getAmount() const
 {
     return amount;
 }
+//category getter
+QString Expense::getCategory() const {
+    return category;
+}
+//product getter
+QString Expense::getProduct() const {
+    return product;
+}
 
 //for creating empty classes(used for summing with overloaded + sign)
 Expense::Expense()
