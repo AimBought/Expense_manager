@@ -72,7 +72,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="summarizeButton">
+           <widget class="QPushButton" name="summaryButton">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
               <horstretch>0</horstretch>
