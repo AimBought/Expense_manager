@@ -7,10 +7,14 @@ SummaryDialog::SummaryDialog(const std::vector<Expense> &expenses, QWidget *pare
     ui->setupUi(this);
     populateCategories();
 
+    //add all items at the beginning and count expenses
+    Expense sum;
     for (const Expense &exp : expensesList)
     {
         ui->summaryListWidget->addItem(exp.toString());
+        sum = sum + exp;
     }
+    ui->expenseLabel->setText(QString("%1 zł").arg(sum.getAmount(), 0, 'f', 2));
 
     connect(ui->categoryComboBox, &QComboBox::currentTextChanged,
             this, &SummaryDialog::updateListForCategory);
@@ -36,8 +40,18 @@ void SummaryDialog::updateListForCategory(const QString &category)
 {
     ui->summaryListWidget->clear();
 
-    for (const Expense &exp : expensesList) {
+    //add category items and count expenses
+    Expense sum;
+    for (const Expense &exp : expensesList)
+    {
         if (category == "All" || exp.getCategory() == category)
+        {
             ui->summaryListWidget->addItem(exp.toString());
+            sum = sum + exp;
+        }
     }
+
+    ui->expenseLabel->setText(QString("%1 zł").arg(sum.getAmount(), 0, 'f', 2));
 }
+
+

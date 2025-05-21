@@ -13,26 +13,46 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QListWidget" name="summaryListWidget">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>40</y>
-     <width>256</width>
-     <height>192</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="categoryComboBox">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>10</y>
-     <width>72</width>
-     <height>24</height>
-    </rect>
-   </property>
-  </widget>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QComboBox" name="categoryComboBox"/>
+       </item>
+       <item>
+        <widget class="QListWidget" name="summaryListWidget"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="sumTitle">
+         <property name="styleSheet">
+          <string notr="true">font: 20pt &quot;Segoe UI&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Summary:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="expenseLabel">
+         <property name="styleSheet">
+          <string notr="true">font: 20pt &quot;Segoe UI&quot;;</string>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>
