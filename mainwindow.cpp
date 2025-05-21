@@ -1,12 +1,11 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include <QMessageBox>
-
 #include "addexpensedialog.h"
 #include "Business_logic/expense.h"
 #include "Business_logic/exceptions.h"
-
 #include "simplelogger.h"
+#include "summarydialog.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -225,4 +224,10 @@ void MainWindow::on_themeCheckBox_toggled(bool checked)
         // LIGHT MODE (clear stylesheet or set custom light one)
         qApp->setStyleSheet("");
     }
+}
+
+void MainWindow::on_summaryButton_clicked()
+{
+    SummaryDialog summaryDialog(expenses, this);
+    summaryDialog.exec();
 }
