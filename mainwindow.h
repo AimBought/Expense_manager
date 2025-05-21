@@ -33,5 +33,6 @@ private slots:
     void on_saveButton_clicked();
     void on_readButton_clicked();
     void on_removeButton_clicked();
+    void on_themeCheckBox_toggled(bool checked);
 };
 #endif // MAINWINDOW_H

@@ -17,6 +17,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->listWidget->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(ui->listWidget, &QListWidget::customContextMenuRequested,
             this, &MainWindow::showListContextMenu);
+    connect(ui->themeCheckBox, &QCheckBox::toggled, this, &MainWindow::on_themeCheckBox_toggled);
 }
 
 MainWindow::~MainWindow()
@@ -199,4 +200,29 @@ void MainWindow::on_removeButton_clicked()
     SimpleLogger simpleLogger;
     simpleLogger.logMessage("List cleared successfully");
 }
-//fix comment
+
+void MainWindow::on_themeCheckBox_toggled(bool checked)
+{
+    if (checked) {
+        // DARK MODE
+        qApp->setStyleSheet(R"(
+            QWidget {
+                background-color: #121212;
+                color: #FFFFFF;
+            }
+            QPushButton {
+                background-color: #1E1E1E;
+                border: 1px solid #333;
+                color: #FFFFFF;
+            }
+            QLineEdit, QComboBox, QListWidget {
+                background-color: #1E1E1E;
+                color: #FFFFFF;
+                border: 1px solid #333;
+            }
+        )");
+    } else {
+        // LIGHT MODE (clear stylesheet or set custom light one)
+        qApp->setStyleSheet("");
+    }
+}
