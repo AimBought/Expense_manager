@@ -202,7 +202,8 @@ void MainWindow::on_removeButton_clicked()
 
 void MainWindow::on_themeCheckBox_toggled(bool checked)
 {
-    if (checked) {
+    if (checked)
+    {
         // DARK MODE
         qApp->setStyleSheet(R"(
             QWidget {
@@ -212,6 +213,9 @@ void MainWindow::on_themeCheckBox_toggled(bool checked)
             QPushButton {
                 background-color: #1E1E1E;
                 border: 1px solid #333;
+                min-width: 80px;
+                min-height: 28px;
+                padding: 3px;
                 color: #FFFFFF;
             }
             QLineEdit, QComboBox, QListWidget {
@@ -219,9 +223,13 @@ void MainWindow::on_themeCheckBox_toggled(bool checked)
                 color: #FFFFFF;
                 border: 1px solid #333;
             }
+            QPushButton:hover {
+                background-color: #555555;
+            }
         )");
-    } else {
-        // LIGHT MODE (clear stylesheet or set custom light one)
+    } else
+    {
+        // LIGHT MODE
         qApp->setStyleSheet("");
     }
 }
