@@ -3,6 +3,7 @@ Expense Manager is a desktop application built with C++ and the Qt framework, de
 This project was developed as part of a university assignment focused on object-oriented programming (OOP) concepts like inheritance, polymorphism, encapsulation, and exception handling.
 
 🧠 Key Features:
+
 ✅ Add new expense with category, product name, payment method, amount, and date
 
 ✅ Edit existing expense via context menu (right-click)
