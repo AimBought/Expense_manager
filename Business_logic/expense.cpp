@@ -4,7 +4,9 @@ Expense::Expense(const QString &category, const QString &product, const QString 
     : category(category), product(product), paymentMethod(paymentMethod),
     amount(amount), date(date) {}
 
-QString Expense::toString() const {
+//used for saving data in string for use listWidget
+QString Expense::toString() const
+{
     return QString("%1 | %2 | %3 | %4 zł | %5")
         .arg(category)
         .arg(product)
@@ -27,11 +29,13 @@ double Expense::getAmount() const
     return amount;
 }
 //category getter
-QString Expense::getCategory() const {
+QString Expense::getCategory() const
+{
     return category;
 }
 //product getter
-QString Expense::getProduct() const {
+QString Expense::getProduct() const
+{
     return product;
 }
 
@@ -50,7 +54,7 @@ Expense Expense::fromString(const QString &str)
 {
     QStringList parts = str.split('|');
     if (parts.size() != 5)
-        return Expense(); // lub zgłoś błąd
+        return Expense();
 
     Expense e;
     e.category = parts[0].trimmed();

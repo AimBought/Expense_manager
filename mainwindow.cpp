@@ -14,8 +14,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     //context menu enabled
     ui->listWidget->setContextMenuPolicy(Qt::CustomContextMenu);
-    connect(ui->listWidget, &QListWidget::customContextMenuRequested,
-            this, &MainWindow::showListContextMenu);
+
+    connect(ui->listWidget, &QListWidget::customContextMenuRequested, this, &MainWindow::showListContextMenu);
     connect(ui->themeCheckBox, &QCheckBox::toggled, this, &MainWindow::on_themeCheckBox_toggled);
 }
 
@@ -24,6 +24,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+//used for add button
 void MainWindow::on_addButton_clicked()
 {
     AddExpenseDialog dialog(this);
@@ -49,6 +50,7 @@ void MainWindow::on_addButton_clicked()
     }
 }
 
+//used for editing and removing expenses with RMB
 void MainWindow::showListContextMenu(const QPoint &pos)
 {
     QPoint globalPos = ui->listWidget->mapToGlobal(pos);
@@ -112,6 +114,7 @@ void MainWindow::showListContextMenu(const QPoint &pos)
     }
 }
 
+//used for saving expenses to a file
 void MainWindow::on_saveButton_clicked()
 {
     try
@@ -140,6 +143,7 @@ void MainWindow::on_saveButton_clicked()
     }
 }
 
+//used for reading and loading expenses from a file
 void MainWindow::on_readButton_clicked()
 {
     try
@@ -178,6 +182,7 @@ void MainWindow::on_readButton_clicked()
     }
 }
 
+//used for updating total value of expenses
 void MainWindow::updateTotalExpense()
 {
     Expense sum;
@@ -200,6 +205,7 @@ void MainWindow::on_removeButton_clicked()
     simpleLogger.logMessage("List cleared successfully");
 }
 
+//used for enabling dark/light mode
 void MainWindow::on_themeCheckBox_toggled(bool checked)
 {
     if (checked)
@@ -234,6 +240,7 @@ void MainWindow::on_themeCheckBox_toggled(bool checked)
     }
 }
 
+//used for opening summary window
 void MainWindow::on_summaryButton_clicked()
 {
     SummaryDialog summaryDialog(expenses, this);
