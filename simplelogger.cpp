@@ -5,6 +5,7 @@
 
 SimpleLogger::SimpleLogger() {}
 
+//used for displaying feedback messages
 void SimpleLogger::logMessage(std::string message)
 {
     QMessageBox msgBox;

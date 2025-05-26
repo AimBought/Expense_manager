@@ -16,8 +16,7 @@ SummaryDialog::SummaryDialog(const std::vector<Expense> &expenses, QWidget *pare
     }
     ui->expenseLabel->setText(QString("%1 zł").arg(sum.getAmount(), 0, 'f', 2));
 
-    connect(ui->categoryComboBox, &QComboBox::currentTextChanged,
-            this, &SummaryDialog::updateListForCategory);
+    connect(ui->categoryComboBox, &QComboBox::currentTextChanged, this, &SummaryDialog::updateListForCategory);
 }
 
 SummaryDialog::~SummaryDialog()
@@ -25,6 +24,7 @@ SummaryDialog::~SummaryDialog()
     delete ui;
 }
 
+//used for collecting all currently used categories
 void SummaryDialog::populateCategories()
 {
     QSet<QString> uniqueCategories;
@@ -36,6 +36,7 @@ void SummaryDialog::populateCategories()
         ui->categoryComboBox->addItem(cat);
 }
 
+//used for displaying expenses from selected category
 void SummaryDialog::updateListForCategory(const QString &category)
 {
     ui->summaryListWidget->clear();

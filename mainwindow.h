@@ -19,15 +19,19 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    //used to update total value of expenses
     void updateTotalExpense();
 
 private:
     Ui::MainWindow *ui;
+    //used for storing data
     std::vector<Expense> expenses;
+    //used to track total value of expenses
     Expense totalExpense;
 
 
 private slots:
+    //all connected widgets functions
     void on_addButton_clicked();
     void showListContextMenu(const QPoint &pos);
     void on_saveButton_clicked();

@@ -4,16 +4,22 @@
 using namespace std;
 #include <exception>
 
-class FileWriteException : public exception {
+//exception for writing to file
+class FileWriteException : public exception
+{
 public:
-    virtual const char* what() const throw() {
+    virtual const char* what() const throw()
+    {
         return "Couldn't write to file!";
     }
 };
 
-class FileReadException : public exception {
+//exception for reading from file
+class FileReadException : public exception
+{
 public:
-    virtual const char* what() const throw() {
+    virtual const char* what() const throw()
+    {
         return "Couldn't read from file!";
     }
 };

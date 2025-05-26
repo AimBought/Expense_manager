@@ -1,6 +1,7 @@
 #include "addexpensedialog.h"
 #include "ui_addexpensedialog.h"
 
+//sets up new window dialog
 AddExpenseDialog::AddExpenseDialog(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::AddExpenseDialog)
@@ -16,6 +17,7 @@ AddExpenseDialog::~AddExpenseDialog()
     delete ui;
 }
 
+//used for getting data from different widgets
 Expense AddExpenseDialog::getExpense() const
 {
     return Expense(
@@ -27,6 +29,7 @@ Expense AddExpenseDialog::getExpense() const
         );
 }
 
+//used while editing expense for naming already added ones
 void AddExpenseDialog::setExpense(const Expense &expense)
 {
     ui->categoryLineEdit->setText(expense.category);

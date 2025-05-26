@@ -10,11 +10,13 @@ public:
     Expense(const QString &category, const QString &product, const QString &paymentMethod, double amount, const QDate &date);
 
     QString toString() const;
+    //expense variable
     QString category;
     QString product;
     QString paymentMethod;
     double amount;
     QDate date;
+
     //amount getter
     double getAmount() const;
     //category getter
